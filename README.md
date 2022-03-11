@@ -1,5 +1,8 @@
 # changelog-github
 
+[![npm (version)](https://img.shields.io/npm/v/@robingenz/changelog-github)](https://www.npmjs.com/package/@robingenz/changelog-github)
+[![npm (downloads)](https://img.shields.io/npm/dw/@robingenz/changelog-github)](https://www.npmjs.com/package/@robingenz/changelog-github)
+
 🦋 A changelog entry generator for GitHub that links to commits and PRs.
 
 This generator is based on [@changesets/changelog-github](https://www.npmjs.com/package/@changesets/changelog-github) and intended for use with [Changesets](https://github.com/changesets/changesets).
