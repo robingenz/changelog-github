@@ -1,6 +1,6 @@
 # changelog-github
 
-🦋 A changelog entry generator for GitHub that links to commits, PRs and users.
+🦋 A changelog entry generator for GitHub that links to commits and PRs.
 
 This generator is based on [@changesets/changelog-github](https://www.npmjs.com/package/@changesets/changelog-github) and intended for use with [Changesets](https://github.com/changesets/changesets).
 

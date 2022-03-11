@@ -1,7 +1,7 @@
 {
   "name": "@robingenz/changelog-github",
   "version": "0.0.0",
-  "description": "A changelog entry generator for GitHub that links to commits, PRs and users.",
+  "description": "A changelog entry generator for GitHub that links to commits and PRs.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
