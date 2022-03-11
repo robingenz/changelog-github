@@ -1,7 +1,7 @@
 export default {
   input: 'dist/esm/index.js',
   output: {
-    file: 'dist/plugin.cjs.js',
+    file: 'dist/index.cjs.js',
     format: 'cjs',
     sourcemap: true,
     inlineDynamicImports: true,
