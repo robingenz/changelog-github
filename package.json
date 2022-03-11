@@ -1,0 +1,53 @@
+{
+  "name": "@robingenz/changelog-github",
+  "version": "0.0.0",
+  "description": "A changelog entry generator for GitHub that links to commits, PRs and users.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist/"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robingenz/changelog-github.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robingenz/changelog-github/issues"
+  },
+  "keywords": [
+    "changesets",
+    "changelog"
+  ],
+  "scripts": {
+    "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
+    "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- --fix --format",
+    "eslint": "eslint . --ext ts",
+    "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
+    "build": "npm run clean && tsc && rollup -c rollup.config.js",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "@changesets/get-github-info": "0.5.0",
+    "@changesets/types": "4.1.0",
+    "dotenv": "16.0.0"
+  },
+  "devDependencies": {
+    "@changesets/parse": "0.3.12",
+    "@ionic/eslint-config": "0.3.0",
+    "@ionic/prettier-config": "2.0.0",
+    "@types/node": "17.0.21",
+    "eslint": "7.11.0",
+    "prettier": "2.5.1",
+    "rimraf": "3.0.2",
+    "rollup": "2.70.0",
+    "typescript": "4.4.4"
+  },
+  "prettier": "@ionic/prettier-config",
+  "eslintConfig": {
+    "extends": "@ionic/eslint-config/recommended"
+  }
+}
