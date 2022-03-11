@@ -32,7 +32,9 @@ const getReleaseLine = async (
     })
     .trim();
 
-  const [firstLine, ...futureLines] = replacedChangelog.split('\n').map((l) => l.trimEnd());
+  const lines = replacedChangelog.split('\n').map((l) => l.trimEnd());
+  const firstLine = lines[0] || `Note: Version bump only`;
+  const futureLines = lines.slice(1);
 
   const links = await (async () => {
     if (prFromSummary !== undefined) {
