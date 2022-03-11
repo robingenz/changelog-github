@@ -15,8 +15,12 @@ This generator is based on [@changesets/changelog-github](https://www.npmjs.com/
    ```
 2. Change your .changeset/config.json to point to the new package:
    ```
-   "changelog": "@robingenz/changelog-github"
+   "changelog": [
+      "@robingenz/changelog-github",
+      { "repo": "org/repo" }
+   ],
    ```
+   Replace `org/repo` with your own repo.
 
 ## Changelog
 
