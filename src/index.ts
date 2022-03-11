@@ -64,12 +64,11 @@ const getReleaseLine = async (
     };
   })();
 
-  const prefix = [
-    links.pull === null ? '' : ` (${links.pull})`,
-    links.commit === null ? '' : ` (${links.commit})`,
-  ].join('');
+  const prefix = [links.commit === null ? '' : ` ${links.commit}`, links.pull === null ? '' : ` (${links.pull})`].join(
+    ''
+  );
 
-  return `\n\n-${prefix ? `${prefix} -` : ''} ${firstLine}\n${futureLines.map((l) => `  ${l}`).join('\n')}`;
+  return `\n\n-${prefix ? `${prefix}:` : ''} ${firstLine}\n${futureLines.map((l) => `  ${l}`).join('\n')}`;
 };
 
 const changelogFunctions: ChangelogFunctions = {
